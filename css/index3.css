@@ -1,0 +1,25 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+  
+#chartdiv {
+    width: 100%;
+    height: 500px;
+}
+img {
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#week {
+    color: darkgreen;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+button {
+    margin-left: 10px;
+}
