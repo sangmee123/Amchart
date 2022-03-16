@@ -1,13 +1,14 @@
 // var fs = require('fs');
 // var val1 = [];
+// var j = 0;
 
 /*동기식*/
 // var arr1 = fs.readFileSync('file.txt').toString().split(",");
-// for(i in arr1)
-//   val1[i] = arr1;
+// for(i in arr1) {
+//   val1[j] = arr1;
+//   j++;
 
 /*비동기식*/
-// var j = 0;
 // fs.readFile('data1.txt', 'utf-8', function(err, data) {
 //   if(err) throw err;
 //   var arr1 = data.toString.split(",");
