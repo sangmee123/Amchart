@@ -1,12 +1,10 @@
 // var fs = require('fs');
 // var val1 = [];
-// var j = 0;
 
 /*동기식*/
 // var arr1 = fs.readFileSync('file.txt').toString().split(",");
 // for(i in arr1) {
-//   val1[j] = i;
-//   j++;
+//   val1[i] = arr1[i];
 // }
 
 /*비동기식*/
@@ -15,8 +13,7 @@
 //   var arr1 = data.toString.split(",");
   
 //   for(i in arr1) {
-//     val1[j] = i;
-//     j++;
+//     val1[i] = arr1[i];
 //   }
 // });
 
