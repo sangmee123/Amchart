@@ -1,13 +1,20 @@
-// let fs = require('fs');
-// let val1 = [];
+// var fs = require('fs');
+// var val1 = [];
 
-// fs.readFile('data1.txt', function(err, data) {
+/*동기식*/
+// var arr1 = fs.readFileSync('file.txt').toString().split(",");
+// for(i in arr1)
+//   val1[i] = arr1;
+
+/*비동기식*/
+// var j = 0;
+// fs.readFile('data1.txt', 'utf-8', function(err, data) {
 //   if(err) throw err;
-//   let arr1 = data.toString.split(",");
+//   var arr1 = data.toString.split(",");
   
 //   for(i in arr1) {
-//     val1[i] = arr1[i];
-//     console.log(arr1[i]);
+//     val1[j] = i;
+//     j++;
 //   }
 // });
 
