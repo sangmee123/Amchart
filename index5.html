@@ -2,19 +2,20 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Kakao 지도 시작하기</title>
+	<title>여러 다양한 그래프</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <link href="css/index5.css" rel="stylesheet">
 </head>
 <body>
-	<div id="map" style="width:500px;height:400px;"></div>
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다."></script>
-	<script>
-		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
-			level: 3
-		};
-
-		var map = new kakao.maps.Map(container, options);
-	</script>
+	<figure class="highcharts-figure" style="width: 1000px;">
+        <div id="container"></div>
+    </figure>
+    <img src="images/chart5.jpg" style="width: 50%;">
+    <div id="week"><b>4주차 그래프</b></div>
+    <button><a href="index4.html">4주차-1</a></button><button><a href="index6.html">4주차-3</a></button>
 </body>
+<script src="js/index5.js"></script>
 </html>

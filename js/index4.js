@@ -163,7 +163,7 @@ button.events.on("click", function () {
   if (currentId == "vilnius") {
     selectOrigin("london");
   } else {
-    selectOrigin("vilnius");
+    selectOrigin("southKorea");
   }
 });
 
@@ -172,7 +172,7 @@ var originCities = [
     id: "london",
     title: "London",
     destinations: [
-      "vilnius",
+      "southKorea",
       "reykjavik",
       "lisbon",
       "moscow",
@@ -189,8 +189,8 @@ var originCities = [
     zoomPoint: { longitude: -20.1341, latitude: 49.1712 }
   },
   {
-    id: "vilnius",
-    title: "Vilnius",
+    id: "southKorea",
+    title: "South Korea",
     destinations: [
       "london",
       "brussels",
@@ -203,9 +203,9 @@ var originCities = [
       "belgrade",
       "madrid"
     ],
-    geometry: { type: "Point", coordinates: [25.2799, 54.6896] },
-    zoomLevel: 4.92,
-    zoomPoint: { longitude: 15.4492, latitude: 50.2631 }
+    geometry: { type: "Point", coordinates: [37.532600, 127.024612] },
+    zoomLevel: 10,
+    zoomPoint: { longitude: 127.024612, latitude: 37.532600 }
   }
 ];
 

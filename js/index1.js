@@ -1,7 +1,7 @@
 // var fs = require('fs');
 // var val1 = [];
 
-/*비동기식*/
+// /*비동기식*/
 // fs.readFile("data1.txt", "utf-8", function(err, data) {
 //   console.log(data);
 //   var arr1 = data.split(",");
@@ -17,6 +17,17 @@ let val1 = [ 5000, 4350, 3740, 3100, 2450,
   430, 350, 290, 200, 190, 180, 170, 160, 
   150, 140, 130, 120, 110, 80, 70, 60, 50, 
   40, 30 ];
+
+// const fs = require('fs');
+// fs.readFile('data1.txt', function read(err, data) {
+//     if (err) {
+//         throw err;
+//     }
+//     const content = data;
+
+//     console.log(content);   
+//     processFile(content);   
+// });
 
 let val2 = [ 5000, 5090, 5110, 5120, 5130, 
   5150, 5140, 5130, 5120, 5110, 5100, 
