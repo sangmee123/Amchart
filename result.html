@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3월 최종</title>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script> 
+        <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+        <link href="css/result.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <figure class="highcharts-figure1" style="width: 500px;">
+            <div id="container1"></div>
+        </figure>
+
+        <figure class="highcharts-figure2" style="width: 500px;">
+            <div id="container2"></div>
+            <table id="datatable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>점유율</th>
+                        <th>성장률</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>삼성전자</th>
+                        <td>19</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <th>샤오미</th>
+                        <td>17</td>
+                        <td>83</td>
+                    </tr>
+                    <tr>
+                        <th>애플</th>
+                        <td>14</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>오포</th>
+                        <td>10</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <th>비보</th>
+                        <td>10</td>
+                        <td>27</td>
+                    </tr>
+                </tbody>
+            </table>
+        </figure>
+
+        <div id="chartdiv" style="width: 600px;"></div>
+    </body>
+    <script src="js/result.js"></script>
+</html>

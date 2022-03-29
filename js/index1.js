@@ -1,94 +1,76 @@
-// var fs = require('fs');
-// var val1 = [];
+let filename1 = 'data1.csv';
+let filename2 = 'data2.csv';
 
-// /*비동기식*/
-// fs.readFile("data1.txt", "utf-8", function(err, data) {
-//   console.log(data);
-//   var arr1 = data.split(",");
-  
-//   for(i in arr1) {
-//     val1[i] = arr1[i];
-//     console.log(val1[i]);
-//   }
-// });
+d3.csv(filename2).then(function(d2) {
+  d3.csv(filename1).then(function (d1) {
+    let val1 = [];
+    let val2 = [];
 
-let val1 = [ 5000, 4350, 3740, 3100, 2450, 
-  1820, 1500, 1260, 1000, 800, 600, 520, 
-  430, 350, 290, 200, 190, 180, 170, 160, 
-  150, 140, 130, 120, 110, 80, 70, 60, 50, 
-  40, 30 ];
-
-// const fs = require('fs');
-// fs.readFile('data1.txt', function read(err, data) {
-//     if (err) {
-//         throw err;
-//     }
-//     const content = data;
-
-//     console.log(content);   
-//     processFile(content);   
-// });
-
-let val2 = [ 5000, 5090, 5110, 5120, 5130, 
-  5150, 5140, 5130, 5120, 5110, 5100, 
-  5090, 5085, 5080, 5075, 5070, 5060, 
-  5050, 5040, 5020, 5000, 5020, 5040, 
-  5050, 5060, 5070, 5090, 5110, 5120, 
-  5130, 5150 ];
-
-Highcharts.chart('container', {
-  title: {
-    text: 'PM2.5 집진 성능 시험'
-  },
-
-  yAxis: { 
-    min: 0,
-    max: 5200,
-    title: {
-      text: '분진농도(µg/m3)'
-    },
-  },
-
-  xAxis:{
-      min: 0,
-      max: 30
-  },    
-
-  legend: {
-    layout: 'vertical',
-    align: 'right',
-    verticalAlign: 'middle'
-  },
-
-  plotOptions: {
-    series: {
-      label: {
-        connectorAllowed: false
-      },
-      pointStart: 0
+    for (let i = 0; i < d1.columns.length; i++) {
+      val1.push(parseInt(d1.columns[i]));
     }
-  },
-
-  series: [{
-    name: '30분만에 제거',
-    data: val1
-  }, {
-    name: '자연감소',
-    data: val2
-  }],
-
-  responsive: {
-    rules: [{
-      condition: {
-        maxWidth: 500
+    console.log("ARR1", val1);
+    
+    for (let i = 0; i < d2.columns.length; i++) {
+      val2.push(parseInt(d2.columns[i]));
+    }
+    console.log("ARR2", val2);
+    
+    Highcharts.chart('container', {
+      title: {
+        text: 'PM2.5 집진 성능 시험'
       },
-      chartOptions: {
-        legend: {
-          layout: 'horizontal',
-          align: 'center',
-          verticalAlign: 'bottom'
+    
+      yAxis: { 
+        min: 0,
+        max: 5200,
+        title: {
+          text: '분진농도(µg/m3)'
+        },
+      },
+    
+      xAxis:{
+          min: 0,
+          max: 30
+      },    
+    
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+      },
+    
+      plotOptions: {
+        series: {
+          label: {
+            connectorAllowed: false
+          },
+          pointStart: 0
         }
+      },
+    
+      series: [{
+        name: '30분만에 제거',
+        data: val1
+      }, {
+        name: '자연감소',
+        data: val2
+      }],
+    
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 500
+          },
+          chartOptions: {
+            legend: {
+              layout: 'horizontal',
+              align: 'center',
+              verticalAlign: 'bottom'
+            }
+          }
+        }]
       }
-    }]
-  }
+    });
+  });
 });
