@@ -1,3 +1,17 @@
+a {
+    text-decoration-line: none;
+}
+#final {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgb(223, 178, 120);
+    padding: 15px 15px;
+    border-radius: 10px;
+    border-color:rgb(255, 212, 71);
+    font-size: 20px;
+}
+
 h2 {
     margin-top: 50px;
     text-align: center;
@@ -20,6 +34,6 @@ img {
     margin-left: 10px;
 }
 
-button {
+#e {
     margin-left: 10px;
 }
