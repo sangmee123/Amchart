@@ -47,23 +47,21 @@
 /*Amchart Map Css*/
 #chartdiv1 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    width: 1000px;
+    width: 710px;
     height: 500px;
 }
 
 /* */
 #chartdiv2 {
     display: inline-block;
-    width: 550px;
+    width: 500px;
     height: 500px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /*배경 지도 CSS*/
 
-.olControlAttribution{right:20px;}
-.olControlLayerSwitcher{right:20px; top:20px;}
-
-#layer {
-    margin-left: 590px;
-}
+.olControlAttribution {right: 20px;}
+.olControlLayerSwitcher {right: 20px; top: 20px;}
+#map {margin-left: 20px;}
+#layer {margin-left: 390px;}
