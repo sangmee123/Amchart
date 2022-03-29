@@ -2,20 +2,46 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>여러 다양한 그래프</title>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <link href="css/index5.css" rel="stylesheet">
+	<title>여러 다양한 그래프-2</title>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        #chartdiv {
+            width: 100%;
+            height: 500px;
+        }
+
+        img {
+            width: 300px;
+            display: block;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #week {
+            color: darkgreen;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            font-size: large;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+
+    </style>
 </head>
 <body>
-	<figure class="highcharts-figure" style="width: 1000px;">
-        <div id="container"></div>
-    </figure>
-    <img src="images/chart5.jpg" style="width: 50%;">
+	<div id="chartdiv"></div>
+    <img src="images/chart6.jpg" style="width: 20%;">
     <div id="week"><b>4주차 그래프</b></div>
-    <button><a href="index4.html">4주차-1</a></button><button><a href="index6.html">4주차-3</a></button>
+    <button><a href="index4.html">4주차-1</a></button><button><a href="result.html">5주차-최종</a></button>
 </body>
 <script src="js/index5.js"></script>
 </html>

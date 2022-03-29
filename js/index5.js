@@ -1,57 +1,71 @@
-Highcharts.chart('container', {
-    chart: {
-        type: 'spline'
-    },
-    title: {
-        text: 'Monthly Average Temperature'
-    },
-   
-    xAxis: {
-        categories: ['1월', '3월', '6월', '9월', '12월', '']
-    },
-    yAxis: {
-        title: {
-            text: 'Temperature'
-        },
-        labels: {
-            formatter: function () {
-                return this.value + '°';
-            }
-        }
-    },
-    tooltip: {
-        crosshairs: true,
-        shared: true
-    },
-    plotOptions: {
-        spline: {
-            marker: {
-                radius: 4,
-                lineColor: '#666666',
-                lineWidth: 1
-            }
-        }
-    },
-    series: [{
-        name: '자연광',
-        marker: {
-            enabled: false
-        },
-        data: [7.0, 25.0, 50.0, {
-            y: 89,
-            marker: { 
-                enabled: false
-            }
-        }, 56.3, 11.0]
+/**
+ * ---------------------------------------
+ * This demo was created using amCharts 5.
+ * 
+ * For more information visit:
+ * https://www.amcharts.com/
+ * 
+ * Documentation is available at:
+ * https://www.amcharts.com/docs/v5/
+ * ---------------------------------------
+ */
 
-    }, {
-        name: '인공지능',
-        color: 'red',
-        marker: {
-            enabled: false
-        },
-        data: [60.0, 61.7, 65.9,{
-            y: 80.5,
-        }, 65.2, 60.5]
-    }]
+// Create root element
+// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+var root = am5.Root.new("chartdiv");
+
+
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+root.setThemes([
+  am5themes_Animated.new(root)
+]);
+
+
+// Create chart
+// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+var chart = root.container.children.push(am5percent.PieChart.new(root, {
+  layout: root.verticalLayout,
+  innerRadius: am5.percent(50)
+}));
+
+
+// Create series
+// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+var series = chart.series.push(am5percent.PieSeries.new(root, {
+  valueField: "value",
+  categoryField: "category",
+  alignLabels: false
+}));
+
+series.labels.template.setAll({
+  textType: "circular",
+  centerX: 0,
+  centerY: 0
 });
+
+
+// Set data
+// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+series.data.setAll([
+  { value: 55, category: "탄수화물" },
+  { value: 25, category: "지방" },
+  { value: 20, category: "단백질" }
+]);
+
+
+// Create legend
+// https://www.amcharts.com/docs/v5/charts/percent-charts/legend-percent-series/
+var legend = chart.children.push(am5.Legend.new(root, {
+  centerX: am5.percent(50),
+  x: am5.percent(50),
+  marginTop: 15,
+  marginBottom: 15,
+}));
+
+legend.data.setAll(series.dataItems);
+
+
+// Play initial series animation
+// https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
+series.appear(1000, 100);
